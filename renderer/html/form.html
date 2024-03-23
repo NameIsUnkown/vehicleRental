@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add a Vehicle</title>
+	<link href="../css/form.css" rel="stylesheet">
+    <script src="../js/renderer.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>Add a Vehicle</h1>
+	</header>
+	<div class="information-display">
+        <span class="display-title">Fill out the options</span>
+        <div class="type">
+            <div class="car">
+                <span>Car</span>
+                <div class="car-choice"></div>
+            </div>
+            <div class="van">
+                <span>Van</span>
+                <div class="van-choice"></div>
+            </div>
+        </div>
+        <div class="vehicle-information">
+            <div class="general-information">
+                <span>General Information</span>
+                <div class="registration">
+                    <span>Registration Number</span>
+                    <input class="registration-container">
+                </div>
+                <div class="wheels">
+                    <span>Number of Wheels</span>
+                    <input class="wheels-container">
+                </div>
+                <div class="weight">
+                    <span>Weight</span>
+                    <input class="weight-container">
+                </div>
+            </div>
+            <div class="car-information">
+                <span>Specific to Cars</span>
+                <div class="passengers">
+                    <span>Number of Passengers</span>
+                    <input class="passengers-container">
+                </div>
+            </div>
+            <div class="van-information">
+                <span>Specific to Vans</span>
+                <div class="height">
+                    <span>Height</span>
+                    <input class="height-container">
+                </div>
+            </div>
+        </div>
+		<button class="submit">Submit</button>
+    </div>
+</body>
+</html>
