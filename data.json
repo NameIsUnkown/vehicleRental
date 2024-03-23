@@ -1,0 +1,79 @@
+[
+    {
+        "registration_number": "A",
+        "wheels_number": "A",
+        "weight_value": "A",
+        "passengers_number": "A",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "b",
+        "wheels_number": "b",
+        "weight_value": "b",
+        "passengers_number": "b",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "a",
+        "wheels_number": "a",
+        "weight_value": "a",
+        "passengers_number": "a",
+        "height_number": null
+    },
+    {
+        "registration_number": "S",
+        "wheels_number": "S",
+        "weight_value": "S",
+        "passengers_number": "S",
+        "height_number": null
+    }
+]
