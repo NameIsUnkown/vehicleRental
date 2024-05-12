@@ -46,10 +46,8 @@ export default class Vehicle {
 				existingData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 			}
 	
-			// Find the index of the item to remove
 			const indexToRemove = existingData.findIndex(item => item.registration_number === data.registration_number);
 	
-			// Remove the item if found
 			if (indexToRemove !== -1) {
 				existingData.splice(indexToRemove, 1);
 				fs.writeFileSync(filePath, JSON.stringify(existingData, null, 4));

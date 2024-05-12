@@ -37,6 +37,8 @@ vanSection.style.display = "none";
 const edit = document.querySelector('.edit');
 const remove = document.querySelector('.remove');
 
+const selected = document.querySelector('.selected');
+
 remove.addEventListener('click', (e) => {
     let regNumInput = document.querySelector('.registration-container')?.textContent;
 
@@ -50,21 +52,31 @@ remove.addEventListener('click', (e) => {
         Vehicle.removeData(dataToRemove, 'data.json');
         console.log("Data removed successfully.");
 
+        mcarChoice.style.backgroundColor = "#C7C7C7";
+        mvanChoice.style.backgroundColor = "#C7C7C7";
 
-        document.querySelector('.registration-container').textContent = "";
+				addtoList.refresh()
+				document.querySelector('.uregistration-container').textContent = "";
+        document.querySelector('.uwheels-container').textContent = "";
+        document.querySelector('.uweight-container').textContent = "";
+        document.querySelector('.upassengers-container').textContent = "";
+        document.querySelector('.uheight-container').textContent = "";
+
+				document.querySelector('.registration-container').textContent = "";
         document.querySelector('.wheels-container').textContent = "";
         document.querySelector('.weight-container').textContent = "";
         document.querySelector('.passengers-container').textContent = "";
         document.querySelector('.height-container').textContent = "";
-
-        mcarChoice.style.backgroundColor = "#C7C7C7";
-        mvanChoice.style.backgroundColor = "#C7C7C7";
+			
+				selected.textContent = ''
     } catch (error) {
         console.error("Error removing data:", error);
     }
 });
 
 edit.addEventListener('click', (e) => {
+	form.style.display = ""
+	informationDisplay.style.display = "none"
 	let regNumInput = document.querySelector('.registration-container')?.textContent;
 	let wheelsNum = document.querySelector('.wheels-container')?.textContent;
 	let weightNum = document.querySelector('.weight-container')?.textContent;
@@ -138,20 +150,25 @@ button.addEventListener('click', (e) => {
 	carChoice.style.backgroundColor = "#C7C7C7";
 	vanChoice.style.backgroundColor = "#C7C7C7";
 
-	items = document.querySelectorAll(".item");
-
-	document.addEventListener('click', async (event) => {
-		if (event.target.classList.contains('item')) {
-			try {
-				console.log("clicked");
-				const data = await (new fetchData()).fetchRegistrationNumber(event.target.textContent);
-				console.log("Data: ", data);
-			} catch (error) {
-				console.error(error);
-			}
-		}
-	});
+	triangle.style.transform = ""
+	isClicked2 = true;
+	itemsContainer.style.display = "none";
 })
+
+items = document.querySelectorAll(".item");
+
+document.addEventListener('click', async (event) => {
+	if (event.target.classList.contains('item')) {
+		try {
+			console.log("clicked");
+			const data = await (new fetchData()).fetchRegistrationNumber(event.target.textContent);
+			selected.textContent = data.registration_number
+			console.log("Data: ", data);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+});
 
 addVehiclesButton.addEventListener('click', (e) => {
 	if (isClicked) {
